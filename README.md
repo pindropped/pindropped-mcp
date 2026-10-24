@@ -16,7 +16,7 @@ An MCP server for [PinDropped](https://pindropped.app), a neighborhood map bulle
 | `create_pin` | Posts a public pin. Needs `user_confirmed=true` after the user approves the exact pin | **public write; may cost money** |
 
 Categories are `event`, `sale`, `free`, `lost_found`, `help`, `housing`, `business`, `notice` (Announcement), `fun`, and `other`.
-Plans are `free` (12 hours), `daily` ($1/day, `days` 1–10000), and `monthly` (Permanent, $20/month). Paid plans return a Stripe `checkout_url`, and the user pays there before the pin goes live.
+Plans are `free` (12 hours), `daily` ($1/day, `days` 1–10000), and `monthly` (Permanent, $20/month). Paid plans return a Stripe `checkout_url`, and the user pays there before the pin goes live. Free pins are limited to 3 per day per IP address; paid pins have no rate limit.
 
 ## Install
 

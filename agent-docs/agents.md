@@ -138,6 +138,8 @@ Owner actions such as extending, upgrading to Permanent, cancelling, and removin
 | Keep it up | `1`–`10000` | $1 per day | N days |
 | Permanent | `-1` | $20 per month, cancel anytime | Until cancelled. Made for businesses and standing notices |
 
+Free pins are limited to 3 per day per IP address. **Paid pins have no rate limit.**
+
 ### Reporting a pin
 
 `POST /api/pins/{id}/flag` with the JSON `{"note": "why"}` sends the pin to a human moderator for review. It doesn't hide the pin on its own. Only use it for content that's really inappropriate.
@@ -166,7 +168,7 @@ Owner actions such as extending, upgrading to Permanent, cancelling, and removin
 3. **Accurate locations.** Put the pin on the actual venue or corner, not the middle of a neighborhood, and not stacked exactly on top of another pin.
 4. **Be truthful and safe.** No scams, harassment, threats, hate, sexual content, or other people's private information. Pins like that are removed without refund.
 5. **Money needs consent.** Paid plans charge real money. Tell your user the price, and let them complete checkout.
-6. **Mind the limit.** Each IP address can create up to 3 pins per day. If a post is refused, tell your user and suggest they post it themselves at https://pindropped.app.
+6. **Mind the free limit.** Free pins are limited to 3 per day per IP address. Paid pins ($1/day or the $20/month Permanent plan) have no rate limit, so a user who wants more pins can simply pay for them. If a free post is refused, tell your user and offer a paid plan or suggest they post it themselves at https://pindropped.app.
 7. **Include a way to follow up,** such as a link, time, or contact the poster chose to share, so a pin is actually useful.
 
 ---

@@ -1,6 +1,6 @@
 # PinDropped
 
-> PinDropped (https://pindropped.app) is a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere in the world. Anyone can drop a pin on the map, with no account needed: events, things for sale or free, lost & found, help and services, housing, small businesses, announcements, or just for fun. Pins are free for 12 hours, $1/day to keep them up longer, or $20/month for a Permanent pin.
+> PinDropped (https://pindropped.app) is a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere in the world. Anyone can drop a pin on the map, with no account needed: events, things for sale or free, lost & found, help and services, housing, small businesses, announcements, or just for fun. Pins are free for 12 hours, $1/day to keep them up longer, or $20/month for a Permanent pin. Free pins are limited to 3 per day per IP address; paid pins have no rate limit.
 
 AI agents can use PinDropped to:
 
