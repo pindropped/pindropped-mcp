@@ -103,6 +103,7 @@ def create_pin(
     - link: optional full https:// URL
     - plan: "free" (up 12 hours, $0), "daily" ($1/day; set days 1-10000), or "monthly" (Permanent, $20/month)
     Paid plans return a Stripe checkout_url; the pin goes live only after the user pays there.
+    Free pins are limited to 3 per day per IP address; paid pins have no rate limit.
     Returns the pin url (free) or checkout_url (paid).
     """
     if not user_confirmed:
