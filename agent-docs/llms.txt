@@ -1,0 +1,25 @@
+# PinDropped
+
+> PinDropped (https://pindropped.app) is a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere in the world. Anyone can drop a pin on the map, with no account needed: events, things for sale or free, lost & found, help and services, housing, small businesses, announcements, or just for fun. Pins are free for 12 hours, $1/day to keep them up longer, or $20/month for a Permanent pin.
+
+AI agents can use PinDropped to:
+
+- Find what's happening near a place right now, such as events, notices, lost pets, free stuff, and local businesses. Each pin has a public page at https://pindropped.app/p/{id} with a link-preview card.
+- Post a pin for their user, such as an event, a lost pet, a yard sale, a business promo, or an advocacy message in front of Capitol Hill staffers. Only post when a real user asks and has approved the exact pin. Paid plans return a Stripe checkout link for the user to pay.
+
+Reading is open: `GET /api/pins?bbox=minLng,minLat,maxLng,maxLat` returns live pins as JSON. Category values are `event`, `sale`, `free`, `lost_found`, `help`, `housing`, `business`, `notice` (Announcement), `fun`, and `other`. Titles can be up to 80 characters, and details up to 500.
+
+## Docs
+
+- [PinDropped for AI agents](https://pindropped.app/agents): when to use it, API examples, categories, limits, pricing and checkout, and etiquette
+- [OpenAPI spec](https://pindropped.app/openapi.json): machine-readable REST API
+- [MCP server (pindropped-mcp)](https://github.com/pindropped/pindropped-mcp): `search_pins`, `get_pin`, `create_pin`, and `pin_url` tools for Claude, Cursor, ChatGPT, and other MCP clients
+
+## Examples
+
+- [Live pins around Capitol Hill (JSON)](https://pindropped.app/api/pins?bbox=-77.02,38.875,-76.975,38.905)
+- [The map](https://pindropped.app/)
+
+## Optional
+
+- [Interactive API docs](https://pindropped.app/docs)

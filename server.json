@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.pindropped/pindropped",
+  "description": "Find local events, notices, and lost pets on the PinDropped neighborhood map, and post pins for your user.",
+  "version": "0.1.0",
+  "repository": { "url": "https://github.com/pindropped/pindropped-mcp", "source": "github" },
+  "websiteUrl": "https://pindropped.app/agents",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "pindropped-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
