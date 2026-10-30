@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pindropped": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/pindropped/pindropped-mcp", "pindropped-mcp"]
+    }
+  }
+}
