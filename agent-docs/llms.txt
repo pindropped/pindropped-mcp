@@ -1,6 +1,6 @@
 # PinDropped
 
-> PinDropped (https://pindropped.app) is a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere in the world. Anyone can drop a pin on the map, with no account needed: events, things for sale or free, lost & found, help and services, housing, small businesses, announcements, or just for fun. Pins are free for 12 hours, $1/day to keep them up longer, or $20/month for a Permanent pin. Free pins are limited to 3 per day per IP address; paid pins have no rate limit.
+> PinDropped (https://pindropped.app) is a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere in the world. Anyone can drop a pin on the map, with no account needed: events, things for sale or free, lost & found, help and services, housing, small businesses, announcements, or just for fun. Pins are free for 12 hours, $1/day to keep them up longer, or $20/month for a Permanent pin. Free pins are limited to 3 per day per IP address; paid pins aren't held to that limit.
 
 AI agents can use PinDropped to:
 
@@ -12,7 +12,7 @@ Reading is open: `GET /api/pins?bbox=minLng,minLat,maxLng,maxLat` returns live p
 ## Docs
 
 - [PinDropped for AI agents](https://pindropped.app/agents): when to use it, API examples, categories, limits, pricing and checkout, and etiquette
-- [OpenAPI spec](https://pindropped.app/openapi.json): machine-readable REST API
+- [OpenAPI spec](https://pindropped.app/openapi.json): machine-readable REST API (3 public endpoints: list, get, create pins, plus report)
 - [MCP server (pindropped-mcp)](https://github.com/pindropped/pindropped-mcp): `search_pins`, `get_pin`, `create_pin`, and `pin_url` tools for Claude, Cursor, ChatGPT, and other MCP clients
 
 ## Examples
@@ -23,3 +23,5 @@ Reading is open: `GET /api/pins?bbox=minLng,minLat,maxLng,maxLat` returns live p
 ## Optional
 
 - [Interactive API docs](https://pindropped.app/docs)
+- [agents.md as Markdown](https://pindropped.app/agents.md)
+- [robots.txt](https://pindropped.app/robots.txt) · [sitemap.xml](https://pindropped.app/sitemap.xml)

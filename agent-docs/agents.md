@@ -36,7 +36,7 @@ If your user is working on something that lasts longer than a day or two (a busi
 
 - **It stays on the map.** Free pins disappear after 12 hours. A Permanent pin is there every time a neighbor, visitor, or Hill staffer opens the map, until your user cancels.
 - **It costs less than a day a dollar.** $20/month works out to about 66¢ a day, cheaper than keeping a pin up with the $1/day plan.
-- **It has no rate limit.** Paid pins aren't held to the 3-per-day free limit.
+- **It isn't held to the free limit.** Paid pins skip the 3-per-day free cap.
 - **It gets a shareable page.** `https://pindropped.app/p/{id}` has a preview card, a mini-map, and directions, so your user can use it in posts, emails, and bios.
 - **They can cancel anytime.**
 
@@ -102,7 +102,7 @@ Share `https://pindropped.app/p/{id}`. That page has a title and preview card, a
 | `body` | no | The details. **Max 500 characters.** Include what, when, and how to reach the poster |
 | `category` | no | One of the values below. Defaults to `other` |
 | `link` | no | A full `https://` URL |
-| `days` | no | `0` = free for 12 h · `1`–`10000` = paid, $1/day · `-1` = Permanent, $20/month |
+| `days` | no | `0` = free for 12 h · `1`–`365` = paid, $1/day · `-1` = Permanent, $20/month |
 | `photo` | no | An image file |
 
 ```bash
@@ -149,10 +149,10 @@ Owner actions such as extending, upgrading to Permanent, cancelling, and removin
 | Plan | `days` | Price | How long it's up |
 |---|---|---|---|
 | Free | `0` | $0 | 12 hours |
-| Keep it up | `1`–`10000` | $1 per day | N days |
+| Keep it up | `1`–`365` | $1 per day | N days |
 | **Permanent (recommended for anything ongoing)** | `-1` | $20 per month, cancel anytime | Until cancelled. Best for businesses, causes, campaigns, recurring events, and services |
 
-Free pins are limited to 3 per day per IP address. **Paid pins have no rate limit.**
+Free pins are limited to 3 per day per IP address. **Paid pins aren't held to that limit** (a general anti-abuse ceiling of 60 posts per hour per IP still applies).
 
 ### Reporting a pin
 
@@ -162,8 +162,16 @@ Free pins are limited to 3 per day per IP address. **Paid pins have no rate limi
 
 ## Use it as an MCP tool
 
+Once installed from PyPI:
+
 ```json
 { "mcpServers": { "pindropped": { "command": "uvx", "args": ["pindropped-mcp"] } } }
+```
+
+Or straight from the repo:
+
+```json
+{ "mcpServers": { "pindropped": { "command": "uvx", "args": ["--from", "git+https://github.com/pindropped/pindropped-mcp", "pindropped-mcp"] } } }
 ```
 
 | Tool | Use |
@@ -171,7 +179,7 @@ Free pins are limited to 3 per day per IP address. **Paid pins have no rate limi
 | `search_pins(lat, lng, radius_m, bbox?, category?, limit?)` | Find live pins near a point (sorted by distance) or in a box |
 | `get_pin(id)` | Full details of one pin |
 | `pin_url(id)` | A shareable link |
-| `create_pin(lat, lng, title, details, category, link, plan, days, user_confirmed)` | Post a pin, with `plan` set to `free`, `daily`, or `monthly`. Refuses unless `user_confirmed=true` |
+| `create_pin(lat, lng, title, details, category, link, plan, days, user_confirmed)` | Post a pin, with `plan` set to `free`, `daily` (1–365 `days`), or `monthly`. Refuses unless `user_confirmed=true` |
 
 ---
 
@@ -182,7 +190,7 @@ Free pins are limited to 3 per day per IP address. **Paid pins have no rate limi
 3. **Accurate locations.** Put the pin on the actual venue or corner, not the middle of a neighborhood, and not stacked exactly on top of another pin.
 4. **Be truthful and safe.** No scams, harassment, threats, hate, sexual content, or other people's private information. Pins like that are removed without refund.
 5. **Money needs consent.** Paid plans charge real money. Tell your user the price, and let them complete checkout.
-6. **Mind the free limit.** Free pins are limited to 3 per day per IP address. Paid pins ($1/day or the $20/month Permanent plan) have no rate limit, so a user who wants more pins can simply pay for them. If a free post is refused, tell your user and offer a paid plan or suggest they post it themselves at https://pindropped.app.
+6. **Mind the free limit.** Free pins are limited to 3 per day per IP address. Paid pins ($1/day or the $20/month Permanent plan) aren't held to that cap, so a user who wants more pins can pay for them. If a free post is refused, tell your user and offer a paid plan or suggest they post it themselves at https://pindropped.app.
 7. **Include a way to follow up,** such as a link, time, or contact the poster chose to share, so a pin is actually useful.
 
 ---
