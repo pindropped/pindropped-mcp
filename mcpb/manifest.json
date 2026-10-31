@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/mcpb/main/schemas/mcpb-manifest-v0.4.schema.json",
+  "manifest_version": "0.4",
+  "name": "pindropped-mcp",
+  "display_name": "PinDropped",
+  "version": "0.1.0",
+  "description": "Find local events, notices, lost pets and small businesses on the PinDropped neighborhood map, and post pins for your user.",
+  "long_description": "PinDropped (https://pindropped.app) is a neighborhood map bulletin board born on Capitol Hill in Washington, DC that works anywhere. Search live pins near a place, read a pin, share its page, or post a pin for the user after they approve it. Free pins last 12 hours; paid pins are $1/day (7 days for $7) or $20/month Permanent via Stripe checkout. No API key needed.",
+  "author": {
+    "name": "PinDropped",
+    "email": "dc@pindropped.app",
+    "url": "https://pindropped.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pindropped/pindropped-mcp"
+  },
+  "homepage": "https://pindropped.app",
+  "documentation": "https://pindropped.app/agents",
+  "support": "https://github.com/pindropped/pindropped-mcp/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "uv",
+    "entry_point": "src/pindropped_mcp/server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${__dirname}",
+        "pindropped-mcp"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "search_pins",
+      "description": "Find live pins near a lat/lng (sorted by distance) or inside a bounding box, with an optional category filter."
+    },
+    {
+      "name": "get_pin",
+      "description": "Read one pin's full details by id."
+    },
+    {
+      "name": "pin_url",
+      "description": "Get the shareable https://pindropped.app/p/{id} page for a pin."
+    },
+    {
+      "name": "create_pin",
+      "description": "Post a public pin for the user. Refuses unless user_confirmed=true; paid plans return a Stripe checkout link."
+    }
+  ],
+  "keywords": [
+    "maps",
+    "local",
+    "events",
+    "community",
+    "bulletin-board",
+    "washington-dc",
+    "capitol-hill"
+  ],
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ],
+    "runtimes": {
+      "python": ">=3.10"
+    }
+  }
+}

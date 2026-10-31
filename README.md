@@ -1,8 +1,8 @@
 # pindropped-mcp
 
-<!-- mcp-name: app.pindropped/pindropped -->
+<!-- mcp-name: io.github.pindropped/pindropped-mcp -->
 
-<img src="assets/logo-400.png" alt="PinDropped logo" width="96" align="right">
+<img src="https://raw.githubusercontent.com/pindropped/pindropped-mcp/main/assets/logo-400.png" alt="PinDropped logo" width="96" align="right">
 
 An MCP server for [PinDropped](https://pindropped.app), a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere. It lets an AI assistant:
 
@@ -54,7 +54,9 @@ pindropped-mcp --http         # streamable HTTP on http://127.0.0.1:8000/mcp
 
 ### Claude Desktop
 
-Edit `claude_desktop_config.json`. On macOS it's at `~/Library/Application Support/Claude/`, and on Windows at `%APPDATA%\Claude\`:
+**One-click:** download [`pindropped-mcp-0.1.0.mcpb`](https://github.com/pindropped/pindropped-mcp/releases/latest) from the latest release and open it (or drag it into Settings → Extensions). Claude Desktop installs it with its built-in uv runtime.
+
+**Or by hand:** edit `claude_desktop_config.json`. On macOS it's at `~/Library/Application Support/Claude/`, and on Windows at `%APPDATA%\Claude\`:
 
 ```json
 {

@@ -9,8 +9,22 @@ description = "MCP server for PinDropped.app: find local events and notices on a
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "PinDropped", email = "dc@pindropped.app" }]
-keywords = ["mcp", "model-context-protocol", "local", "events", "map", "washington-dc", "bulletin-board"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "local", "events", "map", "washington-dc", "bulletin-board"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications",
+    "Topic :: Scientific/Engineering :: GIS",
+]
 dependencies = ["mcp>=1.2", "httpx>=0.27"]
 
 [project.optional-dependencies]
@@ -19,9 +33,14 @@ test = ["pytest>=8", "respx>=0.21"]
 [project.urls]
 Homepage = "https://pindropped.app"
 Documentation = "https://pindropped.app/agents"
+Repository = "https://github.com/pindropped/pindropped-mcp"
+Issues = "https://github.com/pindropped/pindropped-mcp/issues"
 
 [project.scripts]
 pindropped-mcp = "pindropped_mcp.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pindropped_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/pindropped_mcp", "tests", "README.md", "LICENSE", "pyproject.toml", "server.json"]

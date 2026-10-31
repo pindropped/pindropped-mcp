@@ -1,16 +1,32 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "app.pindropped/pindropped",
-  "description": "Find local events, notices, and lost pets on the PinDropped neighborhood map, and post pins for your user.",
+  "name": "io.github.pindropped/pindropped-mcp",
+  "title": "PinDropped",
+  "description": "Find local events, notices and lost pets on the PinDropped neighborhood map, and post pins.",
   "version": "0.1.0",
-  "repository": { "url": "https://github.com/pindropped/pindropped-mcp", "source": "github" },
+  "repository": {
+    "url": "https://github.com/pindropped/pindropped-mcp",
+    "source": "github"
+  },
   "websiteUrl": "https://pindropped.app/agents",
   "packages": [
     {
       "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
       "identifier": "pindropped-mcp",
       "version": "0.1.0",
-      "transport": { "type": "stdio" }
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/pindropped/pindropped-mcp/releases/download/v0.1.0/pindropped-mcp-0.1.0.mcpb",
+      "fileSha256": "6c15f2d5f1e0c616f1dabe53144aa18e026faa0bebf8ed59231846907a83d19a",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }
