@@ -2,6 +2,8 @@
 
 <!-- mcp-name: io.github.pindropped/pindropped-mcp -->
 
+[![Pindropped Mcp score on AI Agents Listing](https://aiagentslisting.com/pindropped-mcp/badge.svg?variant=score)](https://aiagentslisting.com/mcp/pindropped-mcp)
+
 <img src="https://raw.githubusercontent.com/pindropped/pindropped-mcp/main/assets/logo-400.png" alt="PinDropped logo" width="96" align="right">
 
 An MCP server for [PinDropped](https://pindropped.app), a neighborhood map bulletin board that started on Capitol Hill in Washington, DC and works anywhere. It lets an AI assistant:
